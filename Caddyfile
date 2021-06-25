@@ -1,0 +1,12 @@
+http://django.localhost:9000
+
+encode gzip zstd
+
+root * "/mnt/c/Users/Rubén de Moya/PHPStorm/kernews-with-django-rest-framework/kernews-with-django-rest-framework"
+
+@notStatic {
+  not path /static/* /media/*
+}
+reverse_proxy @notStatic 127.0.0.1:8000
+
+file_server

@@ -1,5 +1,11 @@
 {% extends 'layouts/base.html' %}
-{% block title %}Welcome{% endblock %}
+{% block title %}Formulario{% endblock %}
 {% block main %}
-
+<form action="" novalidate method="post">
+    {% csrf_token %}
+    {{ news_form.as_p }}
+    <p>
+        <input type="submit" value="Guardar">
+    </p>
+</form>
 {% endblock %}
